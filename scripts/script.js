@@ -1,153 +1,145 @@
-let TIMES = 2;
-let COUNT = 0;
-const N = 12;
+let showMoreCount = 0;
 
-let label1 = 'tab-category-all';
-let label2 = 'tab-category-first-group';
-let label3 = 'tab-category-second-group';
-let label4 = 'tab-category-third-group';
-let label5 = 'tab-category-fourth-group';
-
-
-let filterEvent;
-
-function init() {
-  showMoreEvent();
-  galeryFilter();
-}
 document.addEventListener('DOMContentLoaded', init);
+function init() {
+	initDate();
+	let showMore = document.getElementById('our-amaizing-work__show-more');
+	showMore.onclick = showMoreEvent;
 
-function galeryFilter() {
-  let ourAmaizingWorkUl = document.querySelectorAll(".galery-filter");
-  console.log(ourAmaizingWorkUl);
-  ourAmaizingWorkUl.forEach(elem => {
-    filterEvent = elem.addEventListener('click', selectClass);
+	let filterButtons = document.querySelectorAll('.filter-btn');
+	filterButtons.forEach((element) => {
+		filterEvent(element);
+		showMoreCount = 0;
+		showMore.hidden = false;
+	});
 
-  });
+	let allButton = document.querySelector('.filter-btn');
+	allButton.onclick = clickAll;
 }
-
-function selectClass(filterEvent) {
-
-  console.log(filterEvent.target.id);
-  if (filterEvent.target.id == 'label1') {
-    let itemsToShow = document.querySelectorAll('.' + label1);
-    showItems(itemsToShow);
-
-
-
-  } else if (filterEvent.target.id == 'label2') {
-    let itemsToShow = document.querySelectorAll('.' + label2);
-    showItems(itemsToShow);
-    hideItems(label3);
-    hideItems(label4);
-    hideItems(label5);
-
-  } else if (filterEvent.target.id == 'label3') {
-    let itemsToShow = document.querySelectorAll('.' + label3);
-    showItems(itemsToShow);
-    hideItems(label2);
-    hideItems(label4);
-    hideItems(label5);
-
-  } else if (filterEvent.target.id == 'label4') {
-    let itemsToShow = document.querySelectorAll('.' + label4);
-    showItems(itemsToShow);
-    hideItems(label2);
-    hideItems(label3);
-    hideItems(label5);
-
-  } else if (filterEvent.target.id == 'label5') {
-    let itemsToShow = document.querySelectorAll('.' + label5);
-    showItems(itemsToShow);
-    hideItems(label2);
-    hideItems(label3);
-    hideItems(label4);
-
-  }
-  console.log(document.querySelectorAll('.' + label1));
-  console.log(document.querySelectorAll('.' + label2));
-  console.log(document.querySelectorAll('.' + label3));
-  console.log(document.querySelectorAll('.' + label4));
-  console.log(document.querySelectorAll('.' + label5));
-
-
-
+function initDate() {
+	const monthNames = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	];
+	let n = new Date();
+	let y = n.getFullYear();
+	let m = n.getMonth() + 1;
+	let d = n.getDate();
+	document.querySelectorAll('.breacking-news__date').forEach((element) => {
+		element.innerHTML = d + '<br>' + monthNames[m];
+	});
 }
-/*/ ******************************************************    TODO ***************************************************/
-
-
-function showCategory() {
-  let input = document.querySelector("our-amaizing-work input-container > label");
-
-  let galery = document.querySelector('.our-amazing-work__ul');
-  for (let i = 0; i < galery.children.length; i++) {
-    if (galery.children[i].classList.contains(event)) {
-      showItem(galery.children[i]);
-    }
-
-  }
-
+function filterEvent(element) {
+	element.addEventListener('click', filterButtonsEvent);
 }
-function showItems(items) {
-  for (let i = 0; i < 0; i++) {
-    if (items[i]) {
-      items[i].hidden = false;
-    }
-  }
+function filterButtonsEvent() {
+	let current = document.getElementsByClassName('filter-btn-active');
+	current[0].className = current[0].className.replace('filter-btn-active', '');
+	this.className += ' filter-btn-active';
+	let showMore = document.getElementById('our-amaizing-work__show-more');
+	showMore.hidden = false;
+	// console.log(this);
 }
-function hideItems(items) {
-  for (let i = 0; i < 0; i++) {
+function clickAll() {
+	let allButton = document.querySelector('.filter-btn');
+	allButton.click();
 
-    if (items[i]) {
-      items[i].hidden = true;
-    }
-  }
+	// console.log(allButton);
+	if (showMoreCount != 1) {
+		let alwaysShownGroup = document.querySelectorAll('.our-amaizing-work__filter');
+		let firstShowMoreGroup = document.querySelectorAll('.hiden-group-2');
+		let secondShowMoreGroup = document.querySelectorAll('.hiden-group-3');
+		showElements(alwaysShownGroup);
+		hideElements(firstShowMoreGroup);
+		hideElements(secondShowMoreGroup);
+		showMoreCount = 0;
+	}
 }
-
-
 function showMoreEvent() {
-  let button = document.getElementById("our-amaizing-work__show-more");
-  button.addEventListener('click', showMoreCount);
+	clickAll();
+	let alwaysShownGroup = document.querySelectorAll('.our-amaizing-work__filter');
+	let firstShowMoreGroup = document.querySelectorAll('.hiden-group-2');
+	let secondShowMoreGroup = document.querySelectorAll('.hiden-group-3');
 
+	if (showMoreCount == 0) {
+		showElements(alwaysShownGroup);
+		hideElements(secondShowMoreGroup);
+		// showElements(firstShowMoreGroup);
+		showMoreCount++;
+		// hideElements(secondShowMoreGroup);
+	} else if (showMoreCount == 1) {
+		showElements(secondShowMoreGroup);
+		this.hidden = true;
+		showMoreCount++;
+	}
 }
-function getNElements(elem, button) {
-  debugger
-  if (TIMES > 0) {
-    for (let i = N * COUNT; i < N + N * COUNT; i++) {
-      // if (elem.children[i]) {
-      elem.children[i].classList.remove('display-none');
-      elem.children[i].classList.add('display-block');
-      // elem.children[i].style.display = 'block';
-    }
-    TIMES--;
-    if (TIMES <= 0) {
-      hideElement();
-    }
-  }
-}
+function showElements(elements) {
+	// console.log(elements);
 
-function showMoreCount() {
-  if (COUNT < TIMES) {
-    COUNT++;
-    showMore();
-  } else if (COUNT == TIMES) {
-    COUNT++;
-    showMore();
-  } else {
-    COUNT = 0
-  }
-
+	if (elements) {
+		elements.forEach((element) => {
+			element.hidden = false;
+		});
+	} else {
+		elements.hidden = false;
+	}
 }
-function hideElement() {
-  document.querySelector('#our-amaizing-work__show-more').classList.add('display-none')
+function hideElements(elements) {
+	elements.forEach((element) => {
+		element.hidden = true;
+	});
 }
 
-function showMore() {
+function filterSelection(category) {
+	let filterList = document.querySelectorAll('.our-amaizing-work__filter');
+	// console.log(filterList);
+	if (category == 'all' && showMoreCount == 0) {
+		category = '';
+		let alwaysShownGroup = document.querySelectorAll('.our-amaizing-work__filter');
+		let firstShowMoreGroup = document.querySelectorAll('.hiden-group-2');
+		let secondShowMoreGroup = document.querySelectorAll('.hiden-group-3');
+		showElements(alwaysShownGroup);
+		hideElements(secondShowMoreGroup);
+		hideElements(secondShowMoreGroup);
+	}
+	for (let i = 0; i < filterList.length; i++) {
+		filterList[i].hidden = true;
+		if (filterList[i].className.indexOf(category) > -1) filterList[i].hidden = false;
+		// if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], 'show');
+	}
+}
 
-  let galery = document.querySelector('.our-amazing-work__ul');
-  console.log(galery);
+// Show filtered elements
+function w3AddClass(element, name) {
+	let i, arr1, arr2;
+	arr1 = element.className.split(' ');
+	arr2 = name.split(' ');
+	for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i]) == -1) {
+			element.className += ' ' + arr2[i];
+		}
+	}
+}
 
-  getNElements(galery);
-
-
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+	let i, arr1, arr2;
+	arr1 = element.className.split(' ');
+	arr2 = name.split(' ');
+	for (i = 0; i < arr2.length; i++) {
+		while (arr1.indexOf(arr2[i]) > -1) {
+			arr1.splice(arr1.indexOf(arr2[i]), 1);
+		}
+	}
+	element.className = arr1.join(' ');
 }

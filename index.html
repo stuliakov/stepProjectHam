@@ -26,18 +26,18 @@
           </div>
           <nav class="nav-container">
             <ul class="nav-bar uppercase bold">
-              <li class="button-title nav-bar__button">home </li>
-              <li class="button-title nav-bar__button">about</li>
-              <li class="button-title nav-bar__button">kills</li>
-              <li class="button-title nav-bar__button">service</li>
-              <li class="button-title nav-bar__button">work</li>
-              <li class="button-title nav-bar__button">testimotial</li>
-              <li class="button-title nav-bar__button">blog</li>
-              <li class="button-title nav-bar__button">team</li>
-              <li class="button-title nav-bar__button">contact</li>
-              <li class="button-title loop__button">
-                <img src="./assets/loop-ic.png" alt="">
-              </li>
+              <a href="#"><li class="button-title nav-bar__button">home </li></a>
+              <a href="#"><li class="button-title nav-bar__button">about</li></a>
+              <a href="#"><li class="button-title nav-bar__button">kills</li></a>
+              <a href="#"><li class="button-title nav-bar__button">service</li></a>
+              <a href="#"><li class="button-title nav-bar__button">work</li></a>
+              <a href="#"><li class="button-title nav-bar__button">testimotial</li></a>
+              <a href="#"><li class="button-title nav-bar__button">blog</li></a>
+              <a href="#"><li class="button-title nav-bar__button">team</li></a>
+              <a href="#"><li class="button-title nav-bar__button">contact</li></a>
+              <a href="#"><li class="button-title loop__button">
+                  <img src="./assets/loop-ic.png" alt="">
+                </li></a>
             </ul>
           </nav>
         </div>
@@ -93,13 +93,16 @@
 
     <section class="width-restricting" id="our-services">
       <div class="our-services-container">
-        <h1>Our Services</h1>
+        <h1 class="our-services__title">Our Services</h1>
+        <div class="colorLine"></div>
+        <div class="colorLine colorLine2"></div>
+
 
         <div class="our-services our-services-effect-scale
           our-services-theme-1">
           <input type="radio" name="our-services" checked id="tab1"
             class="tab-content-first">
-          <label for="tab1">Web Design</label>
+          <label for="tab1"><span>Web Design</span></label>
 
           <input type="radio" name="our-services" id="tab2"
             class="tab-content-2">
@@ -215,248 +218,228 @@
       </div>
     </section>
     <section class="everything-is-ready">
-      <h1 class="everything__title font-montserrat bold">Everything is ready.
-        just buy and install
-        now</h1>
-      <p class="everything__descr font-montserrat">Smooth reliable, responsive
-        ready, perfect
-        portfolio, unique blog layout and many many options for you</p>
-      <button class="button button-title button__explore-now font-montserrat
-        uppercase bold">purchase now</button>
+      <div class="everything-is-ready__content">
+        <h1 class="everything__title font-montserrat bold">Everything is ready.
+          just buy and install
+          now</h1>
+        <p class="everything__descr font-montserrat">Smooth reliable, responsive
+          ready, perfect
+          portfolio, unique blog layout and many many options for you</p>
+        <button class="button button-title button__explore-now font-montserrat
+          uppercase bold">purchase now</button>
+      </div>
     </section>
 
     <section class="our-amazing-work width-restricting">
-      <h1>Our Amazing Work</h1>
-      <div class="input-container">
-        <input type="radio" name="our-amazing-work__radio" checked id="tab1"
-          class="galery-filter-input tab-content-first">
-        <label for="our-amazing-work__tab1" class="galery-filter" id="label1">All</label>
-        <input type="radio" name="our-amazing-work__radio" id="tab2"
-          class="galery-filter-input tab-content-2">
-        <label for="our-amazing-work__tab2" class="galery-filter" id="label2">Graphic
-          Design</label>
-        <input type="radio" name="our-amazing-work__radio" id="tab3"
-          class="galery-filter-input tab-content-3">
-        <label for="our-amazing-work__tab3" class="galery-filter" id="label3">Web
-          Design</label>
-        <input type="radio" name="our-amazing-work__radio" id="tab4"
-          class="galery-filter-input tab-content-4">
-        <label for="our-amazing-work__tab4" class="galery-filter" id="label4">Landing
-          Panges</label>
-        <input type="radio" name="our-amazing-work__radio" id="tab5"
-          class="galery-filter-input tab-content-5">
-        <label for="our-amazing-work__tab5" class="galery-filter" id="label5">Wordpress</label>
+      <h1 class="our-amazing-work__title">Our Amazing Work</h1>
+      <div class="colorLine"></div>
+      <div class="colorLine colorLine2"></div>
+      <div class="button-container">
+        <button class="filter-btn filter-btn-active"
+          onclick="filterSelection('all')"> All</button>
+        <button class="filter-btn" onclick="filterSelection('graphicDesign')">Graphic
+          Design</button>
+        <button class="filter-btn" onclick="filterSelection('webDesign')">Web
+          Design</button>
+        <button class="filter-btn" onclick="filterSelection('landingPages')">Landing
+          Panges</button>
+        <button class="filter-btn" onclick="filterSelection('wordpress')">Wordpress</button>
       </div>
-      <ul class="our-amazing-work__ul">
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work01.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work02.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work03.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work04.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work05.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work06.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-first-group"><img
-            src="./assets/amaizing-work07.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-second-group"><img
-            src="./assets/amaizing-work08.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-second-group"><img
-            src="./assets/amaizing-work09.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-second-group"><img
-            src="./assets/amaizing-work10.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-second-group"><img
-            src="./assets/amaizing-work11.png"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all
-          tab-category-second-group"><img
-            src="./assets/amaizing-work12.jpg"
-            alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work01.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work02.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work03.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work04.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work05.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work06.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-second-group"><img
-            src="./assets/amaizing-work07.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work08.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work09.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work10.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work11.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work12.jpg" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work01.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work02.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work03.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none"
-          tab-category-third-group><img
-            src="./assets/amaizing-work04.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work05.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work06.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-third-group"><img
-            src="./assets/amaizing-work07.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-fourth-group"><img
-            src="./assets/amaizing-work08.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-fourth-group"><img
-            src="./assets/amaizing-work09.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-fourth-group"><img
-            src="./assets/amaizing-work10.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-fourth-group"><img
-            src="./assets/amaizing-work11.png" alt="" srcset=""></li>
-        <li class="our-amazing-work__li tab-category-all display-none
-          tab-category-fourth-group"><img
-            src="./assets/amaizing-work12.jpg" alt="" srcset=""></li>
-      </ul>
-      <button class="button button-title font-montserrat
-        uppercase bold" id="our-amaizing-work__show-more">show more</button>
+      <div class="our-amazing-work__content-container">
+
+        <img src="./assets/amaizing-work01.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work02.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work03.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work04.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work05.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work06.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work07.png" class="our-amaizing-work__filter
+          graphicDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work08.png" class="our-amaizing-work__filter
+          webDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work09.png" class="our-amaizing-work__filter
+          webDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work10.png" class="our-amaizing-work__filter
+          webDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work11.png" class="our-amaizing-work__filter
+          webDesign" alt="" srcset="">
+        <img src="./assets/amaizing-work12.jpg" class="our-amaizing-work__filter
+          webDesign" alt="" srcset="">
+
+        <img src="./assets/amaizing-work13.jpg" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work14.jpeg"
+          class="our-amaizing-work__filter hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work03.png"
+          class="our-amaizing-work__filter hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work16.png" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work17.jpeg"
+          class="our-amaizing-work__filter hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work18.jpeg"
+          class="our-amaizing-work__filter hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work19.jpg" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work20.png" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work21.jpg" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work22.jpeg"
+          class="our-amaizing-work__filter hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work23.png" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work24.jpg" class="our-amaizing-work__filter
+          hiden-group-2
+          landingPages" alt="" srcset="" hidden>
+
+        <img src="./assets/amaizing-work25.jpg" class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work26.jpg"
+          class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work27.jpeg"
+          class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work28.jpg"
+          class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work29.jpg" class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work30.jpg" class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work31.jpg" class="our-amaizing-work__filter
+          wordpress hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work32.jpeg"
+          class="our-amaizing-work__filter
+          webDesign hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work33.jpg"
+          class="our-amaizing-work__filter
+          webDesign hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work34.jpeg"
+          class="our-amaizing-work__filter
+          webDesign hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work35.jpeg"
+          class="our-amaizing-work__filter
+          webDesign hiden-group-3" alt="" srcset="" hidden>
+        <img src="./assets/amaizing-work03.png" class="our-amaizing-work__filter
+          webDesign hiden-group-3" alt="" srcset="" hidden>
+      </div>
+      <button class="button button-title uppercase bold"
+        id="our-amaizing-work__show-more">show more</button>
     </section>
+    <div class="greyLine"></div>
+
     <section class="breacking-news width-restricting">
-      <h1>Breakcing news</h1>
+      <h1 id="breacking-news__title">Breakcing news</h1>
+      <div class="colorLine"></div>
+      <div class="colorLine colorLine2"></div>
       <div class="breacking-news__container">
         <div class="breacking-news__item">
           <img src="./assets/breacking-news01.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news02.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news03.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news04.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news05.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news06.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news07.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
         <div class="breacking-news__item">
           <img src="./assets/breacking-news08.png" alt="" srcset=""
             class="breacking-news__img">
           <div class="breacking-news__descr">
-            <span>Amazing Image Post</span>
+            <span class="breacking-news__descr__title">Amazing Image Post</span>
             <br>
-            <span>By admin</span>
-            <span>2 coment</span>
+            <span class="breacking-news__descr__by">By admin</span>
+            <span class="breacking-news__descr__coments">2 coment</span>
           </div>
+          <span class="breacking-news__date"></span>
         </div>
-      </div>
-    </section>
-    <footer> © Copyright 2015 theHam | All Rights Reserved</footer>
-  </body>
-</html>
+      </section>
+      <footer> © Copyright 2015 theHam | All Rights Reserved</footer>
+    </body>
+  </html>
